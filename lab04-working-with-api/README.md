@@ -7,7 +7,7 @@ version: "3"
 
 services:
     hello-api:
-      image: hello-api
+      image: myaspnet2
       ports:
           - "5229:5229"
 
