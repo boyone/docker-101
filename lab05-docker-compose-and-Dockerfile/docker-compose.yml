@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+  web:
+    image: hello-web:latest
+    container_name: web
+    restart: always
+    depends_on:
+      - hello-api
+    ports:
+      - '80:80'
+
+  hello-api:
+    image: hello-api:latest
+    container_name: hello-api
+    restart: always
+    ports:
+      - '5229:5229'
+    environment:
+      - TEST_MODE=true
+      - CONNECTIONSTRING__DEFAULT=connection_db
