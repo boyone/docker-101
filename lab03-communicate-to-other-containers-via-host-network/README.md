@@ -1,17 +1,9 @@
 # Docker Network 101
 
-## Build Hello-API
-
-```sh
-# hello
-cd hello
-docker build -t hello-api:0.0.1 .
-```
-
 ## Via Host (Without Docker Compose)
 
 ```sh
-docker container run -d --rm -p 5229:5229 --name hello hello-api:0.0.1
+docker container run -d --rm -p 5229:5229 --name myaspnet2 myaspnet2
 ```
 
 ```sh
